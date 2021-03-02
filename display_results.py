@@ -24,14 +24,15 @@ input = np.load(os.path.join(result_dir, lst_input[id]))
 output = np.load(os.path.join(result_dir, lst_output[id]))
 
 ##
-plt.subplot(131)
-plt.imshow(label)
-plt.title('label')
-
 plt.subplot(132)
-plt.imshow(input)
+plt.imshow(input, cmap='gray')
 plt.title('input')
 
+plt.subplot(131)
+plt.imshow(label, cmap='gray')
+plt.title('label')
+
+
 plt.subplot(133)
-plt.imshow(output)
+plt.imshow(output, cmap='gray')
 plt.title('output')
