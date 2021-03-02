@@ -20,10 +20,8 @@ data_dir = './datasets'
 ckpt_dir = './checkpoint'
 log_dir = './log'
 
-#device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-device = torch.device('cpu')
-
-#torch.backends.cudnn.enabled = False
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+#device = torch.device('cpu')
 
 ## 네트워크 구축
 class UNet(nn.Module):
